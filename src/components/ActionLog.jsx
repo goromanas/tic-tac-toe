@@ -14,9 +14,11 @@ const ActionLog = ({ actions }) => (
       {actions.map((action, index) => (
         <li key={index}>
           Player
+          {' '}
           {action.player}
           {' '}
           selected
+          {' '}
           {action.block}
           {' '}
           block.
