@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const dotenv = require('dotenv');
 
 dotenv.config();

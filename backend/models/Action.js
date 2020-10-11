@@ -1,6 +1,8 @@
+/* eslint-disable no-async-promise-executor */
+/* eslint-disable func-names */
 const actionCollection = require('../db').collection('actions');
 
-let Action = function (data) {
+const Action = function (data) {
   this.data = data;
 };
 
@@ -20,7 +22,7 @@ Action.prototype.addAction = function () {
     try {
       await actionCollection.insertOne({
         block: this.data.block,
-        player: this.data.player
+        player: this.data.player,
       });
       resolve();
     } catch (e) {
